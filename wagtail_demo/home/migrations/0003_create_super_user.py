@@ -11,9 +11,9 @@ class Migration(migrations.Migration):
     def generate_superuser(apps, schema_editor):
         from django.contrib.auth.models import User
 
-        DJANGO_SU_NAME = "admin"
-        DJANGO_SU_EMAIL = "admin@admin.com"
-        DJANGO_SU_PASSWORD = "admin"
+        DJANGO_SU_NAME = os.environ.get("SU_USERNAME")
+        DJANGO_SU_EMAIL = os.environ.get("SU_EMAIL")
+        DJANGO_SU_PASSWORD = os.environ.get("SU_PASSWORD")
 
         superuser = User.objects.create_superuser(
             username=DJANGO_SU_NAME,
