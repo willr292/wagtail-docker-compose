@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "home",
     "search",
     "blog",
+    "landing",
     "wagtail_localize",
     "wagtail_localize.locales",
     "wagtail.contrib.forms",
