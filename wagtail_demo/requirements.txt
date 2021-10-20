@@ -1,4 +1,4 @@
-Django>=3.2,<3.3
+Django>=3.0,<3.3
 wagtail>=2.14,<2.15
 psycopg2-binary
-wagtail_localize
+wagtail_localize==0.9.5
