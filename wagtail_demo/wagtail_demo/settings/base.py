@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     "home",
     "search",
     "blog",
+    "wagtail_localize",
+    "wagtail.locales",
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -47,7 +49,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "wagtail.contrib.routable_page",
-    "wagtail.locales",
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,7 @@ USE_TZ = True
 WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
     ("en", "English"),
     ("fr", "French"),
+    ("es", "Spanish"),
 ]
 
 # Static files (CSS, JavaScript, Images)

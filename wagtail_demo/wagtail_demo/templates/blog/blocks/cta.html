@@ -1,0 +1,16 @@
+{% load wagtailcore_tags %}
+
+<div class="container mb-sm-5 mt-sm-5">
+    <div class="row">
+        <div class="col-md-5 offset-md-1 col-sm-12">
+            <h1>{{ block.value.title }}</h1>
+            {{ block.value.text|richtext }}
+
+            {% if block.button_page %}
+                <a class="btn btn-primary" href="{{ block.value.button_page.url }}">{{ block.value.button_text }}</a>
+            {% elif block.value.button_url %}
+                <a class="btn btn-primary" href="{{ block.value.button_url }}">{{ block.value.button_text }}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

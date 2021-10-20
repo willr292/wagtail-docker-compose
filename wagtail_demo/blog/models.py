@@ -55,6 +55,7 @@ class BlogPage(RoutablePageMixin, Page):
 
 
 class PostPage(Page):
+
     header_image = models.ForeignKey(
         "wagtailimages.Image",
         null=True,
@@ -122,3 +123,17 @@ class PostPageTag(TaggedItemBase):
 class Tag(TaggitTag):
     class Meta:
         proxy = True
+
+
+@register_snippet
+class Footer(models.Model):
+    url = models.URLField(null=True, blank=True)
+    text = models.CharField(max_length=255)
+
+    panels = [
+        FieldPanel("url"),
+        FieldPanel("text"),
+    ]
+
+    def __str__(self):
+        return self.text

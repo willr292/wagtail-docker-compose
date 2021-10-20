@@ -1,5 +1,5 @@
 from django.template import Library
-from blog.models import BlogCategory, Tag
+from blog.models import BlogCategory, Tag, Footer
 
 register = Library()
 
@@ -41,4 +41,12 @@ def post_tags_list(context):
     return {
         "request": context["request"],
         "post_tags": post_tags,
+    }
+
+
+@register.inclusion_tag("blog/components/footer_content.html", takes_context=True)
+def footer(context):
+    return {
+        "footer": Footer.objects.first(),
+        "request": context["request"],
     }
