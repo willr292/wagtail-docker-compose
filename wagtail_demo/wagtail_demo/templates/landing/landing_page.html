@@ -8,8 +8,11 @@
   <img src="{{ logo_image.url }}" class="img-fluid">
   <h1 class="display-5 fw-bold lh-1 mb-3">Welcome!</h1>
   <p class="lead">{{ page.main|richtext }}</p>
-    <a class="btn btn-primary" href="{{ page.link }}">
+    <a class="btn btn-primary" href="{{ page.blog_page.url }}">
       Blog
+    </a>
+    <a class="btn btn-primary" href="{{ page.about_page.url }}">
+      About
     </a>
 </div>
 

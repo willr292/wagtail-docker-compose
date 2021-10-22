@@ -14,6 +14,8 @@
       {% include 'blog/blocks/image_carousel.html' with block=block only %}
     {% elif block.block_type == 'cta' %}
       {% include 'blog/blocks/cta.html' with block=block only %}
+    {% elif block.block_type == 'listicle' %}
+      {% include 'blog/blocks/listicle.html' with block=block only %}
     {% else %}
       <section class="block-{{ block.block_type }}">
         {{ block }}

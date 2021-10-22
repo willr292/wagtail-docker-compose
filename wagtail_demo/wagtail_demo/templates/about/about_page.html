@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block content %}
+<div class="py-10">
+  <h1 class="display-5 fw-bold lh-1 mb-3">About</h1>
+  <p class="lead">{{ page.main|richtext }}</p>
+    <a class="btn btn-primary" href="{{ page.blog_page.url }}">
+      Blog
+    </a>
+</div>
+
+{% endblock %}

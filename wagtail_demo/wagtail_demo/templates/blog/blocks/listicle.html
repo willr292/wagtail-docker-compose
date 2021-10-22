@@ -1,0 +1,9 @@
+{% load wagtailcore_tags %}
+
+<div id="listicle_{{ block.id }}">
+    <ul class="list-group">
+        {% for item in block.value %}
+        <li class="list-group-item"><h3>{{item.header}}</h3><p>{{item.body|richtext}}</p></li>
+        {% endfor %}
+    </ul>
+</div>

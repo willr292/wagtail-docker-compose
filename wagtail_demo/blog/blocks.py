@@ -17,6 +17,11 @@ class ImageText(StructBlock):
     image = ImageChooserBlock()
 
 
+class ListicleBlock(StructBlock):
+    header = CharBlock(required=True, max_length=60)
+    body = RichTextBlock(required=True)
+
+
 class CTABlock(StructBlock):
 
     title = CharBlock(required=True, max_length=60)
@@ -31,6 +36,7 @@ class BodyBlock(StreamBlock):
     h2 = CharBlock()
     paragraph = RichTextBlock()
     cta = CTABlock()
+    listicle = ListBlock(ListicleBlock())
     image_text = ImageText()
     image_carousel = ListBlock(ImageChooserBlock())
     thumbnail_gallery = ListBlock(ImageChooserBlock())

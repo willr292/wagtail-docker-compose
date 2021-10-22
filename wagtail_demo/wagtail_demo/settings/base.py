@@ -20,7 +20,6 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -28,6 +27,7 @@ INSTALLED_APPS = [
     "search",
     "blog",
     "landing",
+    "about",
     "wagtail_localize",
     "wagtail_localize.locales",
     "wagtail.contrib.forms",
@@ -138,6 +138,7 @@ WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
     ("en", "English"),
     ("fr", "French"),
     ("es", "Spanish"),
+    ("de", "German"),
 ]
 
 # Static files (CSS, JavaScript, Images)
