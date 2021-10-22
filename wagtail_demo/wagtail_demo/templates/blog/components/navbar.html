@@ -1,7 +1,9 @@
+{% load wagtailcore_tags %}
+{% wagtail_site as current_site %}
 
 <nav class="mb-2 navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="/">Wagtail Blog Demo</a>
+    <a class="navbar-brand" href="/">{{ current_site.site_name }}</a>
 
     <button
       class="navbar-toggler"
