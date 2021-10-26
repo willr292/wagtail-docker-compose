@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -11,6 +11,7 @@ RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-r
     libjpeg62-turbo-dev \
     zlib1g-dev \
     libwebp-dev \
+    postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Requirements are installed here to ensure they will be cached.
